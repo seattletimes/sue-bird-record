@@ -1,0 +1,198 @@
+.scroll-graph {
+  // z-index: -1;
+  overflow: hidden;
+  position: relative;
+
+  .spacer {
+    height: 100vh;
+  }
+
+  .clip(...) {
+    -webkit-clip-path: @arguments;
+    clip-path: @arguments;
+  }
+
+  .season {
+    height: 120vh;
+    background-image: url(./assets/photos/plum1.jpg);
+    background-position: 60% 0;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .backdrop {
+      transition: all .6s ease-in-out, opacity .8s linear;
+      background-size: cover;
+      background-position: 80% 20%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @circle-size: 400px;
+      .clip(circle(@circle-size at -@circle-size 70%));
+      transform: translateZ(0);
+      will-change: clip-path;
+      opacity: .01;
+    }
+
+    &.active .backdrop {
+      .clip(circle(100% at 50% 50%));
+      opacity: 1;
+      background-position: 50% 0;
+    }
+
+    &.active[data-season="1"] .backdrop { background-position: 70% 0 }
+    &.active[data-season="3"] .backdrop { background-position: 40% 0 }
+
+    &[data-season="1"] .backdrop { background-image: url(./assets/photos/plum2.jpg) }
+    &[data-season="2"] .backdrop { background-image: url(./assets/photos/plum3.jpg) }
+    &[data-season="3"] .backdrop { background-image: url(./assets/photos/plum4.jpg) }
+    &[data-season="4"] .backdrop { background-image: url(./assets/photos/plum5.jpg) }
+    &[data-season="5"] .backdrop { background-image: url(./assets/photos/plum2.jpg) }
+    &[data-season="6"] .backdrop { background-image: url(./assets/photos/plum3.jpg) }
+    &[data-season="7"] .backdrop { background-image: url(./assets/photos/plum4.jpg) }
+    &[data-season="8"] .backdrop { background-image: url(./assets/photos/plum5.jpg) }
+    &[data-season="9"] .backdrop { background-image: url(./assets/photos/plum2.jpg) }
+    &[data-season="10"] .backdrop { background-image: url(./assets/photos/plum3.jpg) }
+    &[data-season="11"] .backdrop { background-image: url(./assets/photos/plum4.jpg) }
+    &[data-season="12"] .backdrop { background-image: url(./assets/photos/plum5.jpg) }
+    &[data-season="13"] .backdrop { background-image: url(./assets/photos/plum2.jpg) }
+    &[data-season="14"] .backdrop { background-image: url(./assets/photos/plum3.jpg) }
+    &[data-season="15"] .backdrop { background-image: url(./assets/photos/plum4.jpg) }
+    &[data-season="16"] .backdrop { background-image: url(./assets/photos/plum5.jpg) }
+    &[data-season="17"] .backdrop { background-image: url(./assets/photos/plum5.jpg) }
+  }
+
+  .viz {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    display: block;
+
+    // canvas {
+    //   background: fade(white, 20%);
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   border-bottom: 1px solid white;
+    //   border-left: 1px solid white;
+    //   display: block;
+    // }
+
+
+
+
+
+    .counter {
+      position: absolute;
+      top: 0;
+      left: 1px;
+      color: white;
+      background: fade(black, 40%);
+      font-family: @df-sans;
+      font-size: 16px;
+      padding: 8px;
+      text-align: right;
+
+      .career {
+        font-weight: bold;
+      }
+
+      @media @mobile {
+        font-size: 14px;
+      }
+    }
+
+    .credit {
+      position: absolute;
+      bottom: 3px;
+      right: 3px;
+      border-radius: 4px;
+      background: fade(black, 20%);
+      padding: 2px 8px;
+      color: white;
+      font-size: 13px;
+      font-family: @df-sans;
+    }
+  }
+}
+
+
+
+
+.popup {
+  position: absolute;
+  width: 400px;
+  max-width: 100%;
+  background: fade(black, 70%);
+  color: white;
+  padding: 32px 16px;
+  border-radius: 4px;
+  box-shadow: 0 8px 8px 16px fade(black, 20%);
+  display: none;
+  font-family: @df-sans;
+  font-size: 16px;
+  z-index: 999;
+  transform: translateZ(0);
+
+  h2 {
+    font-size: 16px;
+    color: white;
+    margin: 0;
+  }
+
+  @media @mobile {
+    font-size: 14px;
+    width: 300px;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 150%;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+
+  a {
+    color: white;
+    display: block;
+    text-align: right;
+  }
+
+  &.record-breaker {
+    background: @st-light-purple;
+    color: black;
+
+    h2, a { color: black; }
+  }
+}
+
+
+.point {
+  @point-size: 12px;
+
+  position: absolute;
+  border: 1px solid white;
+  width: @point-size;
+  height: @point-size;
+  margin-left: -@point-size / 2;
+  margin-top: -@point-size / 2;
+  border-radius: 100%;
+
+  .content {
+    display: none;
+  }
+
+  &.activated {
+    background: white;
+  }
+}
