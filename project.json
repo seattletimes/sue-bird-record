@@ -2,7 +2,7 @@
   "s3": {
     "stage": {
       "bucket": "projects-staging.seattletimes.com",
-      "path": ""
+      "path": "qualitative-submission"
     },
     "live": {
       "bucket": "projects.seattletimes.com",
@@ -15,7 +15,7 @@
   "url": "",
   "post_id": 0,
   "image": "assets/social.jpg",
-  "sheets": ["1zm19SiqKTevvPDW65zDJGY2cRxcyGYjYgcTp48Je7Hw"],
+  "sheets": ["1QiHWlC6lZOPQDDcl1hlPjQxRaXvXBmth_nZ8gFzAmN4"],
   "docs": [],
   "embedded": true,
   "production": false

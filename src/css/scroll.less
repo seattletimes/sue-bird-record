@@ -4,7 +4,7 @@
   position: relative;
 
   .spacer {
-    height: 100vh;
+    // height: 100vh;
   }
 
   .clip(...) {
@@ -14,7 +14,7 @@
 
   .season {
     height: 120vh;
-    background-image: url(./assets/photos/plum1.jpg);
+    background-image: url(./assets/SueBird/bird2002.jpg);
     background-position: 60% 0;
     background-size: cover;
     background-attachment: fixed;
@@ -44,23 +44,23 @@
     &.active[data-season="1"] .backdrop { background-position: 70% 0 }
     &.active[data-season="3"] .backdrop { background-position: 40% 0 }
 
-    &[data-season="1"] .backdrop { background-image: url(./assets/photos/plum2.jpg) }
-    &[data-season="2"] .backdrop { background-image: url(./assets/photos/plum3.jpg) }
-    &[data-season="3"] .backdrop { background-image: url(./assets/photos/plum4.jpg) }
-    &[data-season="4"] .backdrop { background-image: url(./assets/photos/plum5.jpg) }
-    &[data-season="5"] .backdrop { background-image: url(./assets/photos/plum2.jpg) }
-    &[data-season="6"] .backdrop { background-image: url(./assets/photos/plum3.jpg) }
-    &[data-season="7"] .backdrop { background-image: url(./assets/photos/plum4.jpg) }
-    &[data-season="8"] .backdrop { background-image: url(./assets/photos/plum5.jpg) }
-    &[data-season="9"] .backdrop { background-image: url(./assets/photos/plum2.jpg) }
-    &[data-season="10"] .backdrop { background-image: url(./assets/photos/plum3.jpg) }
-    &[data-season="11"] .backdrop { background-image: url(./assets/photos/plum4.jpg) }
-    &[data-season="12"] .backdrop { background-image: url(./assets/photos/plum5.jpg) }
-    &[data-season="13"] .backdrop { background-image: url(./assets/photos/plum2.jpg) }
-    &[data-season="14"] .backdrop { background-image: url(./assets/photos/plum3.jpg) }
-    &[data-season="15"] .backdrop { background-image: url(./assets/photos/plum4.jpg) }
-    &[data-season="16"] .backdrop { background-image: url(./assets/photos/plum5.jpg) }
-    &[data-season="17"] .backdrop { background-image: url(./assets/photos/plum5.jpg) }
+    &[data-season="1"] .backdrop { background-image: url(./assets/SueBird/bird2002.jpg) }
+    &[data-season="2"] .backdrop { background-image: url(./assets/SueBird/bird2020.jpg) }
+    &[data-season="3"] .backdrop { background-image: url(./assets/SueBird/bird2003.jpg) }
+    &[data-season="4"] .backdrop { background-image: url(./assets/SueBird/bird2020.jpg) }
+    &[data-season="5"] .backdrop { background-image: url(./assets/SueBird/bird2004.JPG) }
+    &[data-season="6"] .backdrop { background-image: url(./assets/SueBird/bird2005.jpg) }
+    &[data-season="7"] .backdrop { background-image: url(./assets/SueBird/bird2006.jpg) }
+    &[data-season="8"] .backdrop { background-image: url(./assets/SueBird/bird2007.jpg) }
+    &[data-season="9"] .backdrop { background-image: url(./assets/SueBird/bird2008.jpg) }
+    &[data-season="10"] .backdrop { background-image: url(./assets/SueBird/bird2009.jpg) }
+    &[data-season="11"] .backdrop { background-image: url(./assets/SueBird/bird2010.jpg) }
+    &[data-season="12"] .backdrop { background-image: url(./assets/SueBird/bird2010_2.jpg) }
+    &[data-season="13"] .backdrop { background-image: url(./assets/SueBird/bird2011.jpg) }
+    &[data-season="14"] .backdrop { background-image: url(./assets/SueBird/bird2012.jpg) }
+    &[data-season="15"] .backdrop { background-image: url(./assets/SueBird/bird2014.jpg) }
+    &[data-season="16"] .backdrop { background-image: url(./assets/SueBird/bird2015.jpg) }
+    &[data-season="17"] .backdrop { background-image: url(./assets/SueBird/bird2016.jpg) }
   }
 
   .viz {
@@ -94,19 +94,83 @@
       top: 0;
       left: 1px;
       color: white;
-      background: fade(black, 40%);
+      background: fade(black, 60%);
       font-family: @df-sans;
       font-size: 16px;
-      padding: 8px;
-      text-align: right;
+      padding: 10px;
+      max-width: 20%;
+      // text-align: right;
 
-      .career {
+      .head {
         font-weight: bold;
+        text-decoration: underline;
+        text-align: center;
       }
+
+      .headSeason {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+
+      .block {
+        margin-top: 10px;
+      }
+
+      // .career {
+      //   font-weight: bold;
+      // }
 
       @media @mobile {
+
         font-size: 14px;
       }
+
+
+    }
+
+    .awards {
+      // margin-top: 10px;
+      position: absolute;
+      bottom: 0;
+      color: white;
+      width: 100%;
+      background: fade(black, 60%);
+      font-family: @df-sans;
+      font-size: 16px;
+      padding: 10px;
+
+      .allstars img { max-width: 30px; }
+      .medals img { max-width: 25px; }
+      .wnba img { max-width: 35px; }
+
+      .bigCareer {
+        display: block;
+        text-align: center;
+
+        .head { font-weight: bold; display: inline-block;}
+
+        .career {
+          display: inline-block;
+          padding: 0 10px;
+        }
+      }
+
+
+
+      .each {
+        width: 32%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 5px 10px;
+
+        .titlehed {
+          display: none;
+        }
+      }
+
+
     }
 
     .credit {
@@ -127,14 +191,16 @@
 
 
 .popup {
-  position: absolute;
-  width: 400px;
-  max-width: 100%;
-  background: fade(black, 70%);
+  // position: absolute;
+  // bottom: 0;
+  // width: 400px;
+  // max-width: 100%;
+  // background: fade(black, 70%);
+  margin-top: 10px;
   color: white;
-  padding: 32px 16px;
-  border-radius: 4px;
-  box-shadow: 0 8px 8px 16px fade(black, 20%);
+  // padding: 32px 16px;
+  // border-radius: 4px;
+  // box-shadow: 0 8px 8px 16px fade(black, 20%);
   display: none;
   font-family: @df-sans;
   font-size: 16px;
@@ -187,6 +253,8 @@
   margin-left: -@point-size / 2;
   margin-top: -@point-size / 2;
   border-radius: 100%;
+
+  display: none;
 
   .content {
     display: none;

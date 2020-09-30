@@ -1,72 +1,52 @@
 [
   {
-    "name": "Jackie Stiles",
-    "points": 3393,
-    "school": "SW Mizzou St",
-    "year": 2001,
-    "games": 129
+    "rank": 1,
+    "points": 8931,
+    "name": "Diana Taurasi"
   },
   {
-    "name": "Brittney Griner",
-    "points": 3283,
-    "school": "Baylor",
-    "year": 2013,
-    "games": 148
+    "rank": 2,
+    "points": 7488,
+    "name": "Tina Thompson"
   },
   {
-    "name": "Patricia Hoskins",
-    "points": 3122,
-    "school": "Mississippi Valley State",
-    "year": 1989,
-    "games": 110
+    "rank": 3,
+    "points": 7380,
+    "name": "Tamika Catchings"
   },
   {
-    "name": "Lorri Bauman",
-    "points": 3115,
-    "school": "Drake",
-    "year": 1984,
-    "games": 120
+    "rank": 4,
+    "points": 6811,
+    "name": "Cappie Pondexter"
   },
   {
-    "name": "Jerica Coley",
-    "points": 3107,
-    "school": "FIU",
-    "year": 2014,
-    "games": 131
+    "rank": 5,
+    "points": 6728,
+    "name": "Candice Dupree"
   },
   {
-    "name": "Rachel Banham",
-    "points": 3093,
-    "school": "Minnesota",
-    "year": 2016,
-    "games": 142
+    "rank": 6,
+    "points": 6452,
+    "name": "Katie Smith"
   },
   {
-    "name": "Elena Delle Donne",
-    "points": 3039,
-    "school": "Delaware",
-    "year": 2013,
-    "games": 114
+    "rank": 7,
+    "points": 6262,
+    "name": "Sue Bird"
   },
   {
-    "name": "Maya Moore",
-    "points": 3036,
-    "school": "UConn",
-    "year": 2011,
-    "games": 153
+    "rank": 8,
+    "points": 6253,
+    "name": "Lisa Leslie"
   },
   {
-    "name": "Chamique Holdsclaw",
-    "points": 3025,
-    "school": "Tennessee",
-    "year": 1999,
-    "games": 148
+    "rank": 9,
+    "points": 6005,
+    "name": "Seimone Augustus"
   },
   {
-    "name": "Cheryl Miller",
-    "points": 3018,
-    "school": "USC",
-    "year": 1986,
-    "games": 128
+    "rank": 10,
+    "points": 6005,
+    "name": "Lauren Jackson"
   }
 ]

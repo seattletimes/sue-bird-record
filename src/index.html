@@ -6,7 +6,12 @@
       <%= t.include("partials/_dataLayer.html") %>
       <%= t.include("partials/_gtm.html") %>
     <% } %>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bevan&family=Passion+One:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+      window.plum = <%= JSON.stringify(json.Lauren) %>;
+      window.others = <%= JSON.stringify(json.scorers) %>;
+    </script>
   </head>
   <body>
     <% if (json.project.production && !json.project.embedded) { %>
@@ -17,22 +22,38 @@
 
     <header class="intro">
 
-      <img class="splash" src="./assets/PlumHeader1.jpg" alt="Kelsey Plum: Destined for greatness">
+      <img class="splash" src="./assets/Bird-Banner.jpg" alt="Measuring greatness: A look back at Sue Bird's 17-year career with the Storm">
 
-      <div class="published">Originally published March 1, 2017</div>
+      <div class="bigHed">
+        <div class="headline">Measuring greatness</div>
+        <div class="subhed">A look back at Sue Bird's 17-year career with the Storm</div>
+      </div>
 
-      <p class="chatter">
-        From the time she first laced up her sneakers and stepped on the hardwood for the Huskies, it was evident Kelsey Plum was destined for greatness. With a 57-point barrage to cap her final regular season, Plum now stands alone atop women's college basketball as the No. 1 all-time scorer. Scroll down to take a trip through Plum's historic career and the many, many buckets she's scored with UW.
+      <div class="published">Published Oct. XX, 2020</div>
+
+      <div class="chatter">
+        <p>
+          Sue Bird has already cemented her legacy as one of the greatest WNBA players of all time, along with her status as a Seattle sports icon. The accolades are staggering: 17 seasons, 11 All Star selections, three-time WNBA champion, four-time Olympic gold medalist, two-time NCAA champion. She holds the WNBA assists record (and it’s not close), and has played in more games than anyone. She’s top five all-time in career steals, and ranks No. 7 in total points.
+        </p>
+
+        <p>And she’s not done.</p>
+
+        <p>The 39-year-old, 5-foot-9 guard from Syosett, New York is on the cusp of capturing her fourth championship with the Storm, which would tie the record for most WNBA titles won. As Bird and the Storm get set for the Finals, take a look back at Bird’s historic career in Seattle.</p>
+      </div>
 
       <div class="scroll-indicator">
         ▼
     </header>
 
     <section class="scroll-graph">
-      <div id="navScroll"></div>
+      <div id="navScroll">
+        <% for (var i = 1; i < 18; i++) { %>
+          <div class="seasonDiv"></div>
+        <% } %>
+      </div>
 
-      <% for (var i = 1; i < 5; i++) { %>
-      <div class="season" data-season="<%= i %>">
+      <% for (var i = 1; i < 18; i++) { %>
+      <div class="season" data-season="<%= i %>" data-seasonData="<%= i %>">
         <div class="backdrop"></div>
       </div>
       <% } %>
@@ -41,11 +62,32 @@
 
       <div class="viz">
         <canvas class="graph"></canvas>
-        <div class="popup">
-          <a class="close-button">&times;</a>
-          <div class="notes"></div>
+
+        <div class="counter">
+          <div class="totals"></div>
+          <div class="popup">
+            <!-- <a class="close-button">&times;</a> -->
+            <div class="notes"></div>
+          </div>
         </div>
-        <div class="counter"></div>
+
+        <div class="awards">
+          <div class="bigCareer"></div>
+
+          <div class="each">
+            <div class="titlehed a_s">All-star wins</div>
+            <div class="allstars"></div>
+          </div>
+          <div class="each">
+            <div class="titlehed g_m">Gold medals</div>
+            <div class="medals"></div>
+          </div>
+          <div class="each">
+            <div class="titlehed w_t">WNBA title wins</div>
+            <div class="wnba"></div>
+          </div>
+        </div>
+
         <div class="credit"></div>
       </div>
 
@@ -59,43 +101,135 @@
 
           <div class="chatter">
 
-            <img src="./assets/twitter-card.gif">
+            <div class="enderImg">
+              <img src="assets/ender.JPG"/>
+            </div>
 
             <p>
-              Kelsey Plum has put on a hellacious offensive display in her senior season, capping a historic career and passing some iconic female college basketball players. Plum's 57-point display against Utah made her the No. 1 all-time scorer in NCAA women's basketball, passing Jackie Stiles' previous record. Plum needs just 167 points to become the all-time leading scorer in Division I history, men's or women's. Here's a look at how Plum stacks up among the all-time greats.
+              Text about top 10s
+            </p>
 
           </div>
 
-          <table class="top-scorers">
+          <div class="tableHed">Sue Bird's rankings</div>
+
+          <table class="table top-scorers">
             <thead>
               <tr>
-                <th class="name">Name
-                <th>Record
-                <th>Year
-                <th>Games
+                <th>Rank</th>
+                <th>Points</th>
+                <th>Name</th>
+              </tr>
+            </thead>
             <tbody>
-              <tr class="plum">
-                <td class="name">
-                  Kelsey Plum
-                  <div class="school">UW</div>
-                <td>3,397
-                <td>2017
-                <td>137
-              <% json.scorers.forEach(function(row) { %>
-              <tr>
-                <td class="name"><%= row.name %>
-                  <div class="school"><%= row.school %></div>
-                <td><%= t.formatNumber(row.points) %>
-                <td><%= row.year %>
-                <td><%= row.games %>
-              <% }) %>
+              <% json.scorers.forEach(function(row) {
+                if(row.name === "Sue Bird") {
+              %>
+              <tr class="bold">
+                <td class="name"><%= row.rank %></td>
+                <td><%= t.formatNumber(row.points) %></td>
+                <td><%= row.name %></td>
+              </tr>
+              <% } else { %>
+                <tr>
+                  <td class="name"><%= row.rank %></td>
+                  <td><%= t.formatNumber(row.points) %></td>
+                  <td><%= row.name %></td>
+                </tr>
+              <% } }) %>
+            </tbody>
           </table>
+
+          <table class="table top-assists">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Assists</th>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% json.assists.forEach(function(row) {
+                if(row.name === "Sue Bird") {
+              %>
+              <tr class="bold">
+                <td class="name"><%= row.rank %></td>
+                <td><%= t.formatNumber(row.assists) %></td>
+                <td><%= row.name %></td>
+              </tr>
+              <% } else { %>
+                <tr>
+                  <td class="name"><%= row.rank %></td>
+                  <td><%= t.formatNumber(row.assists) %></td>
+                  <td><%= row.name %></td>
+                </tr>
+              <% } }) %>
+            </tbody>
+          </table>
+
+          <table class="table top-3pts">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>3-point scores</th>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% json.threePts.forEach(function(row) {
+                if(row.name === "Sue Bird") {
+              %>
+              <tr class="bold">
+                <td class="name"><%= row.rank %></td>
+                <td><%= t.formatNumber(row.points) %></td>
+                <td><%= row.name %></td>
+              </tr>
+              <% } else { %>
+                <tr>
+                  <td class="name"><%= row.rank %></td>
+                  <td><%= t.formatNumber(row.points) %></td>
+                  <td><%= row.name %></td>
+                </tr>
+              <% } }) %>
+            </tbody>
+          </table>
+
+          <table class="table top-games">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Games</th>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% json.games.forEach(function(row) {
+                if(row.name === "Sue Bird") {
+              %>
+              <tr class="bold">
+                <td class="name"><%= row.rank %></td>
+                <td><%= t.formatNumber(row.games) %></td>
+                <td><%= row.name %></td>
+              </tr>
+              <% } else { %>
+                <tr>
+                  <td class="name"><%= row.rank %></td>
+                  <td><%= t.formatNumber(row.games) %></td>
+                  <td><%= row.name %></td>
+                </tr>
+              <% } }) %>
+            </tbody>
+          </table>
+
+
+
+
 
         </div>
 
         <ul class="credits">
           <li> Production: Sean Quinton, Evan Webeck
-          <li> Development: Thomas Wilburn
+          <li> Development: Lauren Flannery
         </ul>
 
       </div>
@@ -104,10 +238,7 @@
 
     <%= t.include("partials/_navBottom.html") %>
 
-    <script>
-window.plum = <%= JSON.stringify(json.plum) %>;
-window.others = <%= JSON.stringify(json.scorers) %>;
-    </script>
+
     </responsive-child>
 
     <script src="app.js" async></script>

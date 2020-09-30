@@ -30,32 +30,39 @@ var navScroll = document.getElementById("navScroll");
 
 
 var gameData = window.plum;
+
+// console.log(gameData);
 var maxPoints = gameData[gameData.length - 1].aggregate + 100;
 var total = 0;
-var bySeason = { 1: [], 2: [], 3: [], 4: [] };
+var bySeason = { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [], 11: [], 12: [], 13: [], 14: [], 15: [], 16: [], 17: [] };
 gameData.forEach(function(g, i) {
   bySeason[g.season].push(g);
   var [month, day, year] = g.date.split("/").map(Number);
   g.date = new Date(year, month - 1, day);
-  if (g.notes) {
-    var point = document.createElement("div");
-    point.className = "point";
-    point.setAttribute("data-index", i);
-    point.style.left = (i + 1) / gameData.length * 100 + "%";
-    point.style.top = "0%";
-    navScroll.appendChild(point);
-    g.element = point;
-  }
+  // if (g.notes) {
+  //   var point = document.createElement("div");
+  //   point.className = "point";
+  //   point.setAttribute("data-index", i);
+  //   point.style.left = (i + 1) / gameData.length * 100 + "%";
+  //   point.style.top = "0%";
+  //   navScroll.appendChild(point);
+  //   g.element = point;
+  // }
 });
 
 var canvas = $.one(".graph");
 var context = canvas.getContext("2d");
-var counter = $.one(".viz .counter");
+var counter = $.one(".viz .counter .totals");
+var career = $.one(".viz .awards .bigCareer");
+var awards = $.one(".viz .counter .awards");
+var allstars = $.one(".viz .awards .each .allstars");
+var medals = $.one(".viz .awards .each .medals");
+var trophies = $.one(".viz .awards .each .wnba");
 var credit = $.one(".viz .credit");
 
 var credits = {
   0: "Dean Rutz / The Seattle Times",
-  1: "Lindsay Wasson / The Seattle Times",
+  1: "Dan Hulshizer / AP",
   2: "Ben Moffat / AP",
   3: "Lindsay Wasson / The Seattle Times",
   4: "Logan Riely / The Seattle Times"
@@ -81,9 +88,8 @@ var setPopup = function(data) {
   popup.style.display = "block";
   popup.classList[data.game == 137 ? "add" : "remove"]("record-breaker");
   popup.querySelector(".notes").innerHTML = `
-  <h2>${date(data.date)} vs. ${data.opponent}</h2>
+  <h2>${date(data.date)}</h2>
   ${data.notes}
-  <a href="${data.link}" target="_blank">Read more &raquo;</a>
   `;
   // var vizBounds = vizContainer.getBoundingClientRect();
   // var pointBounds = element.getBoundingClientRect();
@@ -101,11 +107,11 @@ var setPopup = function(data) {
   // popup.style.top = Math.floor(y) + "px";
 }
 
-popup.querySelector(".close-button").addEventListener("click", function() {
-  popup.style.display = "none";
-  $(".point.activated").forEach(p => p.classList.remove("activated"));
-  notClosed = false;
-});
+// popup.querySelector(".close-button").addEventListener("click", function() {
+//   popup.style.display = "none";
+//   $(".point.activated").forEach(p => p.classList.remove("activated"));
+//   notClosed = false;
+// });
 
 var onScroll = debounce(function() {
   var season = null;
@@ -113,7 +119,7 @@ var onScroll = debounce(function() {
   for (var i = 0; i < seasons.length; i++) {
     var s = seasons[i];
     var b = s.getBoundingClientRect();
-    // console.log(b.bottom);
+    // console.log(s);
     if (b.top < 0) {
       if (!s.classList.contains("active")) s.classList.add("active");
     } else {
@@ -137,9 +143,11 @@ var onScroll = debounce(function() {
     return;
   }
   if (progress > 1) progress = .99;
-  var num = season.getAttribute("data-season");
+  // var num = season.getAttribute("data-season");
+  var num = season.getAttribute("data-seasonData");
 
   var seasonData = bySeason[num];
+  // console.log(seasonData);
   credit.innerHTML = "Photo: " + credits[num];
   var index = Math.floor(seasonData.length * progress);
   var final = seasonData[index];
@@ -190,31 +198,68 @@ var tryThis = scrollContainer.getBoundingClientRect().bottom;
 
   // context.stroke();
 
-  if (noted && notClosed) {
-    $(".point.activated").forEach(p => p.classList.remove("activated"));
-    noted.element.classList.add("activated");
-    setPopup(noted);
-  }
+  // if (noted && notClosed) {
+  //   $(".point.activated").forEach(p => p.classList.remove("activated"));
+  //   noted.element.classList.add("activated");
+  //   setPopup(noted);
+  // }
 
   // console.log(gameData.length);
 
   var interval = graphWidth / (gameData.length + 1);
-
   var scrollBarWidth = interval * final.game;
-
-  console.log(scrollBarWidth);
-
-
-
+  // console.log(scrollBarWidth);
   navScroll.style.backgroundSize = `${scrollBarWidth}px 20px`;
+  //
+  // console.log(final);
+
 
 
 
 
   counter.innerHTML = `
-  <div class="game">Game ${final.game}</div>
-  <div class="points">${final.points} of ${final.game_points} total points</div>
-  <div class="career">Career: ${commafy(final.aggregate)} points</div>`
+  <div class="headSeason">Season ${final.season}</div>
+
+  <div class="block">
+    <div class="game head">Game ${final.game}</div>
+    <div class="points">${final.points} points</div>
+    <div class="points">${final.assists} assists</div>
+    <div class="points">${final.steals} steals</div>
+    <div class="points">${final.threept} 3-point scores</div>
+  </div>`
+
+  career.innerHTML = `
+  <div class="block">
+    <div class="head">Career:</div>
+    <div class="career"><b>${final.game}</b> games played</div>
+    <div class="career"><b>${commafy(final.aggregate_points)}</b> points</div>
+    <div class="career"><b>${commafy(final.aggregate_assists)}</b> assists</div>
+    <div class="career"><b>${commafy(final.aggregate_steals)}</b> steals</div>
+    <div class="career"><b>${commafy(final.aggregate_3pts)}</b> 3-point scores</div>
+  </div>`
+
+
+
+
+
+
+  allstars.innerHTML = "";
+  medals.innerHTML = "";
+  trophies.innerHTML = "";
+
+  document.querySelector('.a_s').style.display = (final.all_stars > 0) ? "block" : "none" ;
+  document.querySelector('.g_m').style.display = (final.gold_medals > 0) ? "block" : "none" ;
+  document.querySelector('.w_t').style.display = (final.titles > 0) ? "block" : "none" ;
+
+  for (var i = 0; i < final.all_stars; i++) {
+    allstars.innerHTML += `<img src='../assets/allstar.png'/>`;
+  }
+  for (var i = 0; i < final.gold_medals; i++) {
+    medals.innerHTML += `<img src='../assets/goldmedal.png'/>`;
+  }
+  for (var i = 0; i < final.titles; i++) {
+    trophies.innerHTML += `<img src='../assets/wnba_trophy.png'/>`;
+  }
 
 }, 50);
 
