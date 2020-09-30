@@ -1,5 +1,5 @@
 // var paywall = require("./lib/paywall");
-// setTimeout(() => paywall(12345678), 5000);
+// setTimeout(() => paywall(13176670), 5000);
 
 require("component-responsive-frame/child");
 
@@ -31,6 +31,8 @@ var navScroll = document.getElementById("navScroll");
 
 var gameData = window.plum;
 
+var seasonCounter = 0;
+
 // console.log(gameData);
 var maxPoints = gameData[gameData.length - 1].aggregate + 100;
 var total = 0;
@@ -39,15 +41,28 @@ gameData.forEach(function(g, i) {
   bySeason[g.season].push(g);
   var [month, day, year] = g.date.split("/").map(Number);
   g.date = new Date(year, month - 1, day);
-  // if (g.notes) {
-  //   var point = document.createElement("div");
-  //   point.className = "point";
-  //   point.setAttribute("data-index", i);
-  //   point.style.left = (i + 1) / gameData.length * 100 + "%";
-  //   point.style.top = "0%";
-  //   navScroll.appendChild(point);
-  //   g.element = point;
-  // }
+  if (g.notes) {
+    var point = document.createElement("div");
+    point.className = "point";
+    point.setAttribute("data-index", i);
+    point.style.left = (i + 1) / gameData.length * 100 + "%";
+    point.style.top = "0%";
+    navScroll.appendChild(point);
+    g.element = point;
+  }
+  if (g.first_ofSeason === 1) {
+    seasonCounter += 1;
+
+    var seasonSep = document.createElement("div");
+    seasonSep.className = "seasonSep";
+    seasonSep.setAttribute("data-index", i);
+    console.log(i);
+    seasonSep.innerHTML = `S${seasonCounter}`;
+    seasonSep.style.left = (i + 1) / gameData.length * 100 + "%";
+    seasonSep.style.top = "0%";
+    navScroll.appendChild(seasonSep);
+    // g.element = point;
+  }
 });
 
 var canvas = $.one(".graph");
@@ -61,11 +76,24 @@ var trophies = $.one(".viz .awards .each .wnba");
 var credit = $.one(".viz .credit");
 
 var credits = {
-  0: "Dean Rutz / The Seattle Times",
+  0: "Dan Hulshizer / AP",
   1: "Dan Hulshizer / AP",
-  2: "Ben Moffat / AP",
-  3: "Lindsay Wasson / The Seattle Times",
-  4: "Logan Riely / The Seattle Times"
+  2: "John Froschauer / AP",
+  3: "Rod Mar / The Seattle Times",
+  4: "Bob Chile / AP",
+  5: "Jennifer Pottheiser / Getty",
+  6: "Jim Bates / The Seattle Times",
+  7: "John Froschauer / AP",
+  8: "Mark Harrison / The Seattle Times",
+  9: "Jesse D. Garrabrant / Getting images",
+  10: "Joel Hawksley / The Seattle Times ",
+  11: "Elaine Thompson / AP",
+  12: "Lindsey Wasson / The Seattle Times",
+  13: "Dean Rutz / The Seattle Times",
+  14: "Dean Rutz / The Seattle Times",
+  15: "Dean Rutz / The Seattle Times",
+  16: "Bettina Hansen / The Seattle Times",
+  17: "Phelan M. Ebenhack / AP",
 };
 
 var palette = {
@@ -87,11 +115,9 @@ var setPopup = function(data) {
   if (!element) return;
   popup.style.display = "block";
   popup.classList[data.game == 137 ? "add" : "remove"]("record-breaker");
-  popup.querySelector(".notes").innerHTML = `
-  <h2>${date(data.date)}</h2>
-  ${data.notes}
-  `;
-  // var vizBounds = vizContainer.getBoundingClientRect();
+  popup.querySelector(".notes").innerHTML = `${data.notes}`;
+  // <h2>${date(data.date)}</h2>
+  //var vizBounds = vizContainer.getBoundingClientRect();
   // var pointBounds = element.getBoundingClientRect();
   // var popupBounds = popup.getBoundingClientRect();
   // var offset = 20;
@@ -107,11 +133,11 @@ var setPopup = function(data) {
   // popup.style.top = Math.floor(y) + "px";
 }
 
-// popup.querySelector(".close-button").addEventListener("click", function() {
-//   popup.style.display = "none";
-//   $(".point.activated").forEach(p => p.classList.remove("activated"));
-//   notClosed = false;
-// });
+popup.querySelector(".close-button").addEventListener("click", function() {
+  popup.style.display = "none";
+  $(".point.activated").forEach(p => p.classList.remove("activated"));
+  notClosed = false;
+});
 
 var onScroll = debounce(function() {
   var season = null;
@@ -198,17 +224,17 @@ var tryThis = scrollContainer.getBoundingClientRect().bottom;
 
   // context.stroke();
 
-  // if (noted && notClosed) {
-  //   $(".point.activated").forEach(p => p.classList.remove("activated"));
-  //   noted.element.classList.add("activated");
-  //   setPopup(noted);
-  // }
+  if (noted && notClosed) {
+    $(".point.activated").forEach(p => p.classList.remove("activated"));
+    noted.element.classList.add("activated");
+    setPopup(noted);
+  }
 
   // console.log(gameData.length);
 
   var interval = graphWidth / (gameData.length + 1);
   var scrollBarWidth = interval * final.game;
-  // console.log(scrollBarWidth);
+  console.log(interval);
   navScroll.style.backgroundSize = `${scrollBarWidth}px 20px`;
   //
   // console.log(final);
@@ -218,14 +244,15 @@ var tryThis = scrollContainer.getBoundingClientRect().bottom;
 
 
   counter.innerHTML = `
-  <div class="headSeason">Season ${final.season}</div>
-
   <div class="block">
-    <div class="game head">Game ${final.game}</div>
+    <div class="seasonGame">
+      <div class="headSeason">Season ${final.season}</div>
+      <div class="game head">Game ${final.game}</div>
+    </div>
     <div class="points">${final.points} points</div>
     <div class="points">${final.assists} assists</div>
     <div class="points">${final.steals} steals</div>
-    <div class="points">${final.threept} 3-point scores</div>
+    <div class="points">${final.threept} 3-pointers</div>
   </div>`
 
   career.innerHTML = `
@@ -235,7 +262,7 @@ var tryThis = scrollContainer.getBoundingClientRect().bottom;
     <div class="career"><b>${commafy(final.aggregate_points)}</b> points</div>
     <div class="career"><b>${commafy(final.aggregate_assists)}</b> assists</div>
     <div class="career"><b>${commafy(final.aggregate_steals)}</b> steals</div>
-    <div class="career"><b>${commafy(final.aggregate_3pts)}</b> 3-point scores</div>
+    <div class="career"><b>${commafy(final.aggregate_3pts)}</b> 3-pointers</div>
   </div>`
 
 
@@ -252,13 +279,13 @@ var tryThis = scrollContainer.getBoundingClientRect().bottom;
   document.querySelector('.w_t').style.display = (final.titles > 0) ? "block" : "none" ;
 
   for (var i = 0; i < final.all_stars; i++) {
-    allstars.innerHTML += `<img src='../assets/allstar.png'/>`;
+    allstars.innerHTML += `<img src='assets/allstar.png'/>`;
   }
   for (var i = 0; i < final.gold_medals; i++) {
-    medals.innerHTML += `<img src='../assets/goldmedal.png'/>`;
+    medals.innerHTML += `<img src='assets/goldmedal.png'/>`;
   }
   for (var i = 0; i < final.titles; i++) {
-    trophies.innerHTML += `<img src='../assets/wnba_trophy.png'/>`;
+    trophies.innerHTML += `<img src='assets/wnba_trophy.png'/>`;
   }
 
 }, 50);
@@ -266,10 +293,10 @@ var tryThis = scrollContainer.getBoundingClientRect().bottom;
 window.addEventListener("scroll", onScroll);
 onScroll();
 
-$(".point").forEach(el => el.addEventListener("click", function() {
-  el.classList.toggle("activated");
-  $(".point.activated").filter(p => p != el).forEach(p => p.classList.remove("activated"));
-  var index = el.getAttribute("data-index");
-  setPopup(gameData[index]);
-  notClosed = true;
-}));
+// $(".point").forEach(el => el.addEventListener("click", function() {
+//   el.classList.toggle("activated");
+//   $(".point.activated").filter(p => p != el).forEach(p => p.classList.remove("activated"));
+//   var index = el.getAttribute("data-index");
+//   setPopup(gameData[index]);
+//   notClosed = true;
+// }));

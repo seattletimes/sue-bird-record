@@ -29,7 +29,7 @@
         <div class="subhed">A look back at Sue Bird's 17-year career with the Storm</div>
       </div>
 
-      <div class="published">Published Oct. XX, 2020</div>
+      <div class="published">Published Oct. 2, 2020</div>
 
       <div class="chatter">
         <p>
@@ -47,9 +47,6 @@
 
     <section class="scroll-graph">
       <div id="navScroll">
-        <% for (var i = 1; i < 18; i++) { %>
-          <div class="seasonDiv"></div>
-        <% } %>
       </div>
 
       <% for (var i = 1; i < 18; i++) { %>
@@ -66,7 +63,7 @@
         <div class="counter">
           <div class="totals"></div>
           <div class="popup">
-            <!-- <a class="close-button">&times;</a> -->
+            <a class="close-button">&times;</a>
             <div class="notes"></div>
           </div>
         </div>
@@ -75,7 +72,7 @@
           <div class="bigCareer"></div>
 
           <div class="each">
-            <div class="titlehed a_s">All-star wins</div>
+            <div class="titlehed a_s">All-Star selections</div>
             <div class="allstars"></div>
           </div>
           <div class="each">
@@ -83,7 +80,7 @@
             <div class="medals"></div>
           </div>
           <div class="each">
-            <div class="titlehed w_t">WNBA title wins</div>
+            <div class="titlehed w_t">WNBA titles</div>
             <div class="wnba"></div>
           </div>
         </div>
@@ -103,20 +100,23 @@
 
             <div class="enderImg">
               <img src="assets/ender.JPG"/>
+              <p class="creditEnd">Photo: Bettina Hansen / The Seattle Times</p>
             </div>
 
             <p>
-              Text about top 10s
+              In her 17 seasons, Sue Bird sits at or near the top of the rankings in assists, points, steals, three-pointers and games. Here’s where she stands among the all time WNBA leaders.
             </p>
 
           </div>
 
-          <div class="tableHed">Sue Bird's rankings</div>
+          <div class="tableHed">Sue Bird's place in WNBA history</div>
 
+          <div class="tableCon">
+            <div class="thed">Top WNBA scorers</div>
           <table class="table top-scorers">
             <thead>
               <tr>
-                <th>Rank</th>
+                <th class="name">Rank</th>
                 <th>Points</th>
                 <th>Name</th>
               </tr>
@@ -139,11 +139,14 @@
               <% } }) %>
             </tbody>
           </table>
+        </div>
 
+          <div class="tableCon">
+            <div class="thed">Top WNBA assists</div>
           <table class="table top-assists">
             <thead>
               <tr>
-                <th>Rank</th>
+                <th class="name">Rank</th>
                 <th>Assists</th>
                 <th>Name</th>
               </tr>
@@ -166,11 +169,14 @@
               <% } }) %>
             </tbody>
           </table>
+        </div>
 
+        <div class="tableCon">
+          <div class="thed">Most 3-pointers scored</div>
           <table class="table top-3pts">
             <thead>
               <tr>
-                <th>Rank</th>
+                <th class="name">Rank</th>
                 <th>3-point scores</th>
                 <th>Name</th>
               </tr>
@@ -193,11 +199,14 @@
               <% } }) %>
             </tbody>
           </table>
+        </div>
 
+        <div class="tableCon">
+            <div class="thed">Most games played for the WNBA</div>
           <table class="table top-games">
             <thead>
               <tr>
-                <th>Rank</th>
+                <th class="name">Rank</th>
                 <th>Games</th>
                 <th>Name</th>
               </tr>
@@ -220,21 +229,36 @@
               <% } }) %>
             </tbody>
           </table>
+        </div>
 
 
-
+          <%= t.include("partials/_marketing.html", {type: "morning_brief", placement: "footer"}) %>
 
 
         </div>
 
         <ul class="credits">
-          <li> Production: Sean Quinton, Evan Webeck
-          <li> Development: Lauren Flannery
+          <li> Production:
+            <a href="https://www.seattletimes.com/author/sean-quinton/" target="_blank" rel="nofollow noreferrer noopener">Sean Quinton</a>,
+            <a href="https://www.seattletimes.com/author/chris-cole/" target="_blank" rel="nofollow noreferrer noopener">Chris Cole</a> and
+            <a href="https://www.seattletimes.com/author/zach-price/" target="_blank" rel="nofollow noreferrer noopener">Zach Price</a></li>
+          <li>References:
+            <a href="https://www.basketball-reference.com/" target="_blank" rel="nofollow noreferrer noopener">basketball-reference</a>,
+            <a href="https://www.wnba.com/" target="_blank" rel="nofollow noreferrer noopener">WNBA</a>,
+            <a href="https://www.espn.com/" target="_blank" rel="nofollow noreferrer noopener">ESPN</a>,
+            <a href="https://apnews.com/hub/sports" target="_blank" rel="nofollow noreferrer noopener">The Associate Press</a></li>
+          <li>Photo illustration:
+            <a href="https://www.seattletimes.com/author/rich-boudet/" target="_blank" rel="nofollow noreferrer noopener">Rich Boudet</a>
+          </li>
+          <li> Development:
+            <a href="https://www.seattletimes.com/author/lauren-flannery/" target="_blank" rel="nofollow noreferrer noopener">Lauren Flannery</a>
+          </li>
         </ul>
 
       </div>
 
     </section>
+
 
     <%= t.include("partials/_navBottom.html") %>
 

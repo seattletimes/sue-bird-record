@@ -17,11 +17,28 @@ nav.main-nav {
     font-family: 'Permanent Marker', cursive;
     font-size: 4em;
     line-height: 0.9em;
+
+    @media @mobile {
+      font-size: 3em;
+    }
   }
   .subhed {
     font-family: @df-sans;
     font-size: 2em;
+
+    @media @mobile {
+      margin-top: 20px;
+      font-size: 1.5em;
+      line-height: 1em;
+    }
   }
+}
+
+.creditEnd {
+    color: #7e838b;
+    font-family: "ff-dagny-web-pro", Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-top: 0;
 }
 
 
@@ -32,10 +49,22 @@ nav.main-nav {
   width: 100%;
   z-index: 10;
   top: 0;
-  // font-size: 0px;
+  font-size: 0px;
+
+  .seasonSep {
+    width: 20px;
+    border-left: 1px solid white;
+    position: absolute;
+    height: 20px;
+    font-size: 12px;
+    font-family: @df-sans;
+    color: white;
+    padding-left: 2px;
+    // background-color: white;
+  }
 
   .seasonDiv {
-    width: ~"calc(100% / 17)";
+    width: ~"calc(100% / 16.3)";
     border-right:1px solid black;
     display: inline-block;
     height: 20px;
@@ -43,6 +72,9 @@ nav.main-nav {
     // font-size: 13px;
     // font-family: @df-sans;
   }
+
+  // .seasonDiv:first-child { margin-left: 1%; }
+
 
 
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, #00712b));
@@ -84,7 +116,7 @@ header.intro {
   .published {
     font-size: 16px;
     max-width: 800px;
-    padding: 12px 24px;
+    padding: 10px;
     margin: auto;
     color: @df-middle-gray;
     font-family: @df-sans;
@@ -94,7 +126,8 @@ header.intro {
     display: block;
     max-width: 800px;
     margin: auto;
-    padding: 0px 24px 32px;
+    // padding: 0px 24px 32px;
+    padding: 10px;
 
 
     @media @mobile {
@@ -121,7 +154,8 @@ header.intro {
   .content {
     max-width: 800px;
     margin: auto;
-    padding: 32px 16px;
+    // padding: 32px 16px;
+    padding: 10px;
     font-size: 16px;
   }
 
@@ -134,22 +168,42 @@ header.intro {
     }
   }
 
-  table {
+  .tableHed {
     font-family: @df-sans;
-    font-size: 14px;
-    border-collapse: collapse;
-    margin: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .tableCon {
+    width: 49%;
     display: inline-block;
+    padding: 10px;
+    margin-bottom: 25px;
+    font-family: @df-sans;
+
+    .thed { font-weight: bold; margin-bottom: 10px;}
+  }
+
+  table {
+
+    font-size: 14px;
+    // border-collapse: collapse;
+    width: 100%;
     vertical-align: top;
 
+
     th, td {
-      text-align: right;
-      padding: 2px 8px 2px 0;
+      // text-align: right;
+      padding: 2px 5px;
+
+      @media @mobile { text-align: left; }
     }
 
     th {
       vertical-align: bottom;
       font-weight: bold;
+      text-align: left;
       // font-style: italic;
     }
 
@@ -168,17 +222,19 @@ header.intro {
     }
 
     .name {
-      text-align: left;
+      // text-align: left;
     }
 
     .school {
       font-style: italic;
     }
+
+    @media @mobile { display: table; width: 100%;  }
   }
 
   .credits {
     width: auto;
-    text-align: right;
+    // text-align: right;
     font-family: @df-sans;
     font-style: italic;
     list-style-type: none;

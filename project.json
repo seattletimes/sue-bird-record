@@ -6,17 +6,17 @@
     },
     "live": {
       "bucket": "projects.seattletimes.com",
-      "path": ""
+      "path": "2020/sports/sue-bird-legacy-recap"
     }
   },
-  "title": "",
-  "description": "",
-  "author": "",
-  "url": "",
-  "post_id": 0,
+  "title": "Measuring greatness: A look back at Sue Bird's 17-year career with the Storm",
+  "description": "Sue Bird has already cemented her legacy as one of the greatest WNBA players of all time, along with her status as a Seattle sports icon.",
+  "author": "Sean Quinton",
+  "url": "https://projects.seattletimes.com/2020/sports/sue-bird-legacy-recap/",
+  "post_id": 13176670,
   "image": "assets/social.jpg",
   "sheets": ["1QiHWlC6lZOPQDDcl1hlPjQxRaXvXBmth_nZ8gFzAmN4"],
   "docs": [],
-  "embedded": true,
-  "production": false
+  "embedded": false,
+  "production": true
 }
