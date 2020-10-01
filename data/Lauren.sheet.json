@@ -17,7 +17,7 @@
     "gold_medals": 0,
     "titles": 0,
     "all_stars": 0,
-    "notes": "It was clear early on Sue Bird was destined for stardome, even before she made it to the WNBA. After winning the New York State Player of the Year award in high school, Bird went on to win two NCAA championships at UCONN, while tallying a staggering 114-4 record with the Huskies. In 2002, the Storm selected Bird first overal in the WNBA draft to pair alongside Lauren Jackson, who was selected first overall the year prior."
+    "notes": "It was clear early that Sue Bird was destined for stardom, even before reaching the WNBA. After being named New York's high school player of the year, Bird won two NCAA championships at Connecticut as the Huskies went 114-4 record during her college career. The Storm selected Bird with the No. 1 overall pick in the 2002 WNBA draft to pair with Lauren Jackson, who had been top overall pick in 2001."
   },
   {
     "first_ofSeason": 0,
@@ -435,7 +435,8 @@
     "aggregate_3pts": 44,
     "gold_medals": 0,
     "titles": 0,
-    "all_stars": 0
+    "all_stars": 0,
+    "notes": "Bird scored a career-high 33 points against the Portland Fire and broke a tiebreaker with the Fire for a Western Conference playoff berth. \"This was a big game, and everyone knew it,\" Bird said."
   },
   {
     "first_ofSeason": 0,
@@ -511,7 +512,8 @@
     "aggregate_3pts": 52,
     "gold_medals": 0,
     "titles": 0,
-    "all_stars": 1
+    "all_stars": 1,
+    "notes": "Bird averaged 14.4 points and earned a spot on the Western Conference All-Star team. She was runner-up for the Rookie of the Year award, and Bird and Jackson led the Storm to the playoffs for the first time, where Seattle was swept by the Sparks."
   },
   {
     "first_ofSeason": 0,
@@ -568,8 +570,7 @@
     "aggregate_3pts": 57,
     "gold_medals": 0,
     "titles": 0,
-    "all_stars": 1,
-    "notes": "Bird put up a career high 33 points against the Portland Fire and broke a tie-breaker with the Fire for a Western Conference playoff berth. \"This was a big game and everyone knew it,\" Bird said after the game."
+    "all_stars": 1
   },
   {
     "first_ofSeason": 0,
@@ -607,8 +608,7 @@
     "aggregate_3pts": 57,
     "gold_medals": 0,
     "titles": 0,
-    "all_stars": 1,
-    "notes": "Bird put the league on notice her rookie season, averaging 14.4 points per game and earning a spot on the Western Conference All-Star team. She was runner-up for the Rookie of the Year award and the duo of Bird and Jackson helped lead the Storm to playoffs for the first time, where Seattle was swept by the Sparks."
+    "all_stars": 1
   },
   {
     "first_ofSeason": 1,
@@ -894,7 +894,7 @@
     "gold_medals": 0,
     "titles": 0,
     "all_stars": 1,
-    "notes": "Bird became the fifth player in WNBA history to score 20 or more points and dish out 10 assists in a game in a win over the Mystics. \"If she couldn't get to the basket, she was getting to the\r\nfoul line,\" Seattle coach Ann Donavoan said. \"If she wasn't getting to the foul line, she was making\r\nincredible assists.\""
+    "notes": "Bird became the fifth WNBA player with 20 or more points and 10 or more assists in a game, recording 21 and 10 in a win over the Mystics. \"If she couldn't get to the basket, she was getting to the foul line,\" Seattle coach Anne Donovan told the Associated Press. \"If she wasn't getting to the foul line, she was making incredible assists.\""
   },
   {
     "first_ofSeason": 0,
@@ -1141,7 +1141,8 @@
     "aggregate_3pts": 99,
     "gold_medals": 0,
     "titles": 0,
-    "all_stars": 2
+    "all_stars": 2,
+    "notes": "Bird averaged 12.4 points and 6.5 assists during her second season and led the Storm in minutes, three-pointers and steals. She was selected to her second All-Star game alongside Jackson, who won the league's MVP award. The Storm, however, missed the playoffs."
   },
   {
     "first_ofSeason": 0,
@@ -1255,8 +1256,7 @@
     "aggregate_3pts": 106,
     "gold_medals": 0,
     "titles": 0,
-    "all_stars": 2,
-    "notes": "In her second season, Bird averaged 12.4 points and 6.5 assists per game, leading the Storm in minutes played, three-pointers and steals. She was selected to her second All-Star game alongside Jackson, who won the league's MVP award. The Storm, however, had a disappointing season and missed the playoffs. "
+    "all_stars": 2
   },
   {
     "first_ofSeason": 1,
@@ -1637,7 +1637,7 @@
     "gold_medals": 0,
     "titles": 0,
     "all_stars": 2,
-    "notes": "Bird's spinning reverse layup with 2.6 seconds left in overtime clinched an 85-83 victory over the Mystics, capping a 16-point comeback game by Seattle. \"She made the most incredible shot I've ever seen in women's basketball,\" said Lauren Jackson after the game."
+    "notes": "Bird's spinning, reverse layup with 2.6 seconds left in overtime clinched an 85-83 victory over the Mystics, capping a 16-point comeback. \"She made the most incredible shot I've ever seen in women's basketball,\" Lauren Jackson said."
   },
   {
     "first_ofSeason": 0,
@@ -1733,7 +1733,7 @@
     "gold_medals": 1,
     "titles": 0,
     "all_stars": 2,
-    "notes": "Bird added more hardware by claiming Olympic Gold in her first Olympic games with USA Basketball in Athens. Bird also became one of 11 women to win Olympic Gold, an NCAA championship and a WNBA championship."
+    "notes": "Bird and USA Basketball won a gold medal in her first Olympics, the 2004 Games in Athens, Greece, becoming one of 11 women to win Olympic gold, an NCAA championship and a WNBA championship."
   },
   {
     "first_ofSeason": 0,
@@ -1828,7 +1828,8 @@
     "aggregate_3pts": 165,
     "gold_medals": 1,
     "titles": 0,
-    "all_stars": 2
+    "all_stars": 2,
+    "notes": "After finishing with a franchise-best 20-14 record, the Storm tore through the playoffs and took down the Connecticut Sun in the Finals to capture its first WNBA championship. Bird averaged 8.5 points and 5.3 assists throughout the playoffs, and Betty Lennox was named the Finals MVP."
   },
   {
     "first_ofSeason": 0,
@@ -1904,8 +1905,7 @@
     "aggregate_3pts": 170,
     "gold_medals": 1,
     "titles": 1,
-    "all_stars": 2,
-    "notes": "After finishing the season with a franchise-best 20-14 record, the Storm tore through the playoffs and took down the Connecticut Sun in the Finals to capture their first WNBA Championship. Bird averaged 8.5 points and 5.3 assists per game throughout the playoffs, while Betty Lennox captured Finals MVP in her first season with Seattle."
+    "all_stars": 2
   },
   {
     "first_ofSeason": 1,
@@ -2380,7 +2380,8 @@
     "aggregate_3pts": 208,
     "gold_medals": 1,
     "titles": 1,
-    "all_stars": 3
+    "all_stars": 3,
+    "notes": "Behind Bird's 12.1 points and 5.9 assists, the Storm again coasted to the playoffs. But Seattle was ousted in the first round by Houston. Bird led the league in assists for the first time."
   },
   {
     "first_ofSeason": 0,
@@ -2475,8 +2476,7 @@
     "aggregate_3pts": 215,
     "gold_medals": 1,
     "titles": 1,
-    "all_stars": 3,
-    "notes": "Behind Bird's 12.1 points and 5.9 assists per game, the Storm again coasted to the playoffs, but were ousted in the first round by Houston. Bird led the leage in assists for the first time in her career in 2005."
+    "all_stars": 3
   },
   {
     "first_ofSeason": 1,
@@ -2496,7 +2496,7 @@
     "gold_medals": 1,
     "titles": 1,
     "all_stars": 3,
-    "notes": "Bird notched a swiped a career-high 7 steals in the Storm's season-opening win against the Sparks."
+    "notes": "Bird notched a career-high seven steals in the Storm's season-opening win against the Sparks."
   },
   {
     "first_ofSeason": 0,
@@ -2990,7 +2990,8 @@
     "aggregate_3pts": 257,
     "gold_medals": 1,
     "titles": 1,
-    "all_stars": 3
+    "all_stars": 3,
+    "notes": "Bird set the WNBA record for three-pointers in a half with six against the Shock. Bird had 20 points in the half. \"I don't think I've ever had a half like that in the pros,\" she said after the 81-79 win."
   },
   {
     "first_ofSeason": 0,
@@ -3085,8 +3086,7 @@
     "aggregate_3pts": 268,
     "gold_medals": 1,
     "titles": 1,
-    "all_stars": 4,
-    "notes": "Bird set the WNBA record for three-pointers in a half with 6 during a scorching start against the Shock. Bird had 20 points in the half. \"I don't think I've ever had a half like that in the pros,\" she said after the 81-79 win."
+    "all_stars": 4
   },
   {
     "first_ofSeason": 0,
@@ -3410,7 +3410,7 @@
     "gold_medals": 1,
     "titles": 1,
     "all_stars": 4,
-    "notes": "Bird became the fifth player to reach 1,000 career assists and the youngest in WNBA history. She finished with 11 points and 4 assists in the Storm's blowout win over New York."
+    "notes": "Bird had 11 points and four assists in a blowout victory over New York on July 1, 2007, becoming the fifth WNBA player, and the youngest, with 1,000 career assists."
   },
   {
     "first_ofSeason": 0,
@@ -3681,7 +3681,7 @@
   {
     "first_ofSeason": 1,
     "photo": "bird2008.jpg",
-    "credit": "",
+    "credit": "John Froschauer / AP",
     "season": 7,
     "game": 194,
     "date": "5/17/2008",
@@ -4132,7 +4132,8 @@
     "aggregate_3pts": 351,
     "gold_medals": 2,
     "titles": 1,
-    "all_stars": 5
+    "all_stars": 5,
+    "notes": "With Jackson, the WNBA's reigning MVP, sidelined for the remainder of the season, Bird was forced into a scoring role. The point guard averaged a career-high 19.7 points in 2008, including a 22-point effort in a win over Houston -- part of a four-game streak with 20 or more points."
   },
   {
     "first_ofSeason": 0,
@@ -4189,8 +4190,7 @@
     "aggregate_3pts": 356,
     "gold_medals": 2,
     "titles": 1,
-    "all_stars": 5,
-    "notes": "With Jackson, the WNBA's reigning MVP, sidelined for the remainder of the season, Bird was forced into a scoring role for the Storm. After being asked to be a distributor for much of her career, Bird shouldered the load, averaging a career-high 19.7 points per game in 2008, including a 22-point effort in a win over Houston -- part of a four-game streak of 20 or more points for the point guard."
+    "all_stars": 5
   },
   {
     "first_ofSeason": 0,
@@ -4228,7 +4228,8 @@
     "aggregate_3pts": 360,
     "gold_medals": 2,
     "titles": 1,
-    "all_stars": 5
+    "all_stars": 5,
+    "notes": "The Storm was the lone bright spot in a dreary 2008 for Seattle sports. The Sonics played their last games in Seattle, the Mariners finishing with 101 losses and the Seahawks went 4-12. But the Storm finished second in the Western Conference at 22-12, including 16-1 at home. Bird had a career year, finishing third in the MVP voting and leading the Storm in points (465) and assists (169). The Storm went on to lose to the Sparks in the first round of the playoffs."
   },
   {
     "first_ofSeason": 0,
@@ -4304,13 +4305,12 @@
     "aggregate_3pts": 363,
     "gold_medals": 2,
     "titles": 1,
-    "all_stars": 5,
-    "notes": "The Storm were the lone bright spot in an otherwise dreary year for Seattle sports in 2008. The Sonics played their last games in Seattle, the Mariners finishing with 101 losses and the Seahawks going 4-12, but the Storm finished second in the Western Confernce with a 22-12 record and went 16-1 at home. Bird had a career year, finishing third in MVP voting and leading the Storm in points (465) and assists (169). The Storm went on to lose to the Sparks in the first round of the playoffs. "
+    "all_stars": 5
   },
   {
     "first_ofSeason": 1,
     "photo": "bird2009.jpg",
-    "credit": "",
+    "credit": "Mark Harrison / The Seattle Times",
     "season": 8,
     "game": 227,
     "date": "6/6/2009",
@@ -4590,7 +4590,8 @@
     "aggregate_3pts": 384,
     "gold_medals": 2,
     "titles": 1,
-    "all_stars": 5
+    "all_stars": 5,
+    "notes": "Bird had 20 points in a win against Sacramento on July 17, 2009, reaching 3,000 career points."
   },
   {
     "first_ofSeason": 0,
@@ -4742,7 +4743,8 @@
     "aggregate_3pts": 401,
     "gold_medals": 2,
     "titles": 1,
-    "all_stars": 6
+    "all_stars": 6,
+    "notes": "The Storm finished second in the Western Conference with a 20-14 record, but for the fifth consecutive year Seattle couldn't get past the first round of the playoffs. Bird led the league in assists again."
   },
   {
     "first_ofSeason": 0,
@@ -4894,13 +4896,12 @@
     "aggregate_3pts": 417,
     "gold_medals": 2,
     "titles": 1,
-    "all_stars": 6,
-    "notes": "The Storm again finished second in the Western Confernce with a 20-14 record, but for the fifth striaght yaer, Seattle couldn't get past the first round of the playoffs. Bird led the league in assists once again."
+    "all_stars": 6
   },
   {
     "first_ofSeason": 1,
     "photo": "bird2010.jpg",
-    "credit": "",
+    "credit": "Jesse D. Garrabrant / Getting images",
     "season": 9,
     "game": 258,
     "date": "5/16/2010",
@@ -5332,7 +5333,8 @@
     "aggregate_3pts": 461,
     "gold_medals": 2,
     "titles": 1,
-    "all_stars": 6
+    "all_stars": 6,
+    "notes": "Bird and the Storm broke out in 2010, rolling to a franchise-best 28-6 record, including a 17-0 at home. And after years of frustrating early playoff exits, the Storm breezed through the postseason with a 7-0 record, capped by a sweep of the Atlanta Dream to clinch a second WNBA championship. Bird averaged a career high 7.7 assists throughout the season, dishing many to Jackson, who won her third MVP award."
   },
   {
     "first_ofSeason": 0,
@@ -5522,13 +5524,12 @@
     "aggregate_3pts": 476,
     "gold_medals": 2,
     "titles": 2,
-    "all_stars": 6,
-    "notes": "Bird and the Storm finally broke out in 2010, rolling to a franchise-best 28-6 record in the regular season, including an undefeated 17-0 record at home. And after years of frustrating early exists in the playoffs, the Storm breazed through the postseason with a perfect 7-0 record, capped by a sweep of the Atlanta Dream to clinch a second WNBA championship. Bird posted a career high 7.7 assists per game throughout the season, dishing many of them to Jackson, who won MVP for her third time."
+    "all_stars": 6
   },
   {
     "first_ofSeason": 1,
     "photo": "bird2011.jpg",
-    "credit": "",
+    "credit": "Joel Hawksley / The Seattle Times ",
     "season": 10,
     "game": 291,
     "date": "6/4/2011",
@@ -5904,7 +5905,7 @@
     "gold_medals": 2,
     "titles": 2,
     "all_stars": 6,
-    "notes": "Bird added another clutch moment to her resume, draining a 3-pointer with 0.4 seconds left to take down the Connecticut Sun 81-79. \"In Sue Bird we trust,\" teammate Swin Cash told the AP after the game. \"She's proven herself over and over again. When she puts that shot up, it's going in.\""
+    "notes": "Bird added another clutch moment to her resume, draining a 3-pointer with 0.4 seconds left to take down the Connecticut Sun 81-79. \"In Sue Bird we trust,\" teammate Swin Cash told the AP. \"She's proven herself over and over again. When she puts that shot up, it's going in.\""
   },
   {
     "first_ofSeason": 0,
@@ -6175,7 +6176,7 @@
   {
     "first_ofSeason": 1,
     "photo": "bird2012.jpg",
-    "credit": "",
+    "credit": "Elaine Thompson / AP",
     "season": 11,
     "game": 325,
     "date": "5/18/12",
@@ -6512,7 +6513,8 @@
     "aggregate_3pts": 584,
     "gold_medals": 3,
     "titles": 2,
-    "all_stars": 7
+    "all_stars": 7,
+    "notes": "By 2012, Bird was a fixture on Team USA and captured her third Olympic gold in style. Surrounded by stars such as Diana Taurasi, Candace Parker, Maya Moore and Tamika Catchings, Bird's game plan was to lead and facilitate. She led the U.S with 36 assists (4.5 per game), and an 86-50 win over host France earned the gold medal."
   },
   {
     "first_ofSeason": 0,
@@ -6726,7 +6728,7 @@
   {
     "first_ofSeason": 1,
     "photo": "bird2014.jpg",
-    "credit": "",
+    "credit": "Lindsey Wasson / The Seattle Times",
     "season": 12,
     "game": 354,
     "date": "5/16/2014",
@@ -7063,7 +7065,8 @@
     "aggregate_3pts": 624,
     "gold_medals": 3,
     "titles": 2,
-    "all_stars": 7
+    "all_stars": 7,
+    "notes": "After notching her 2,000th career assist a few days before, Bird grabbed her 1,000th career rebound on June 29, 2014 against Minnesota, becoming the first WNBA player with 2,000 assists, 1,000 rebounds and 4,000 points."
   },
   {
     "first_ofSeason": 0,
@@ -7235,7 +7238,7 @@
     "gold_medals": 3,
     "titles": 2,
     "all_stars": 8,
-    "notes": "Bird's second-quarter rebound against the Lynx made her the first player in WNBA history to total 4,000 points, 2,000 assits and 1,000 rebounds. \"She's one of the greatest players to ever play in the league,\" Storm coach Brian Agler told the AP. \"She's as good a person as she is a player.\""
+    "notes": "With her second-quarter rebound against the Lynx on July 29, 2014, Bird became the first WNBA player with 4,000 points, 2,000 assists and 1,000 rebounds. \"She's one of the greatest players to ever play in the league,\" Storm coach Brian Agler told the AP. \"She's as good a person as she is a player.\""
   },
   {
     "first_ofSeason": 0,
@@ -7354,7 +7357,7 @@
   {
     "first_ofSeason": 1,
     "photo": "bird2015.jpg",
-    "credit": "",
+    "credit": "Dean Rutz / The Seattle Times",
     "season": 13,
     "game": 387,
     "date": "6/6/2015",
@@ -7711,7 +7714,7 @@
     "gold_medals": 3,
     "titles": 2,
     "all_stars": 8,
-    "notes": "A three-pointer in the third quarter launched Bird into rarified territory as the guard became the the first player in WNBA history to score 5,000 points and record 2,000 assists."
+    "notes": "With a three-pointer against New York on Aug. 2, 2015, Bird became the first WNBA player with 5,000 points and 2,000 assists."
   },
   {
     "first_ofSeason": 0,
@@ -7868,7 +7871,7 @@
   {
     "first_ofSeason": 1,
     "photo": "bird2016.jpg",
-    "credit": "",
+    "credit": "Dean Rutz / The Seattle Times",
     "season": 14,
     "game": 414,
     "date": "5/15/2016",
@@ -8453,7 +8456,7 @@
     "gold_medals": 4,
     "titles": 2,
     "all_stars": 9,
-    "notes": "Always known as a stat-sheet stuffer, Bird filled up the box score with a near-triple-double against Washington, tallying 17 points, 9 assists and 7 rebounds. Breanna Stewart, the Storm's other star No. 1 pick from UCONN, also added 17 points in the win."
+    "notes": "Bird filled up the box score with a near-triple-double against Washington on June 9, 2016, tallying 17 points, nine assists and seven rebounds. Only eight triple-doubles have been recorded in WNBA history, with Temeka Johnson notching the only one for the Storm in 2014."
   },
   {
     "first_ofSeason": 0,
@@ -8515,7 +8518,7 @@
   {
     "first_ofSeason": 1,
     "photo": "bird2017.jpg",
-    "credit": "",
+    "credit": "Dean Rutz / The Seattle Times",
     "season": 15,
     "game": 448,
     "date": "5/21/2017",
@@ -8948,7 +8951,7 @@
     "gold_medals": 4,
     "titles": 2,
     "all_stars": 10,
-    "notes": "Bird broke the WNBA's all-time career games started record on Aug. 5 against San Antonio, starting her 470th career game. She still holds the record with 519 regular-season games started."
+    "notes": "Bird's start against San Antonio on Aug. 5, 2017 broke the WNBA's career record for games started  with 470. She holds the record with 519 regular-season starts. "
   },
   {
     "first_ofSeason": 0,
@@ -9082,12 +9085,12 @@
     "gold_medals": 4,
     "titles": 2,
     "all_stars": 10,
-    "notes": "Bird recorded her 2,600th career assists in the first quarter of an eventual loss to the Mystics to pass Ticha Penicheiro and become the all-time WNBA assists leader -- a record she still holds today."
+    "notes": "Bird recorded her 2,600th career assist against the Mystics on June 1, 2017 to pass Ticha Penicheiro and become the WNBA's career leader -- a record she still holds."
   },
   {
     "first_ofSeason": 1,
     "photo": "bird2018.jpg",
-    "credit": "",
+    "credit": "Bettina Hansen / The Seattle Times",
     "season": 16,
     "game": 478,
     "date": "5/20/2018",
@@ -9557,7 +9560,8 @@
     "aggregate_3pts": 840,
     "gold_medals": 4,
     "titles": 2,
-    "all_stars": 11
+    "all_stars": 11,
+    "notes": "Bird and the Storm earned a third Finals appearance in epic fashion in 2018. With the Storm trailing the Phoenix Mercury by 11 points in Game 5 of the Western Conference finals, Bird made five of her final six shots to score 14 points in the closing minutes to lead a Storm victory in front of the raucous KeyArena crowd. Bird and the Storm went on to sweep the Mystics in the Finals to claim a third championship."
   },
   {
     "first_ofSeason": 0,
@@ -9657,7 +9661,7 @@
   {
     "first_ofSeason": 0,
     "photo": "bird2019.jpg",
-    "credit": "",
+    "credit": "Ken Lambert / The Seattle Times",
     "season": 16,
     "game": 508,
     "date": "8/17/2018",
@@ -9671,13 +9675,12 @@
     "aggregate_3pts": 855,
     "gold_medals": 4,
     "titles": 3,
-    "all_stars": 11,
-    "notes": "Bird stamped her ticket to a third Finals appearance in epic fashion. After trailing the Pheonix Mercury by 11 points in an elimation game 5 of the Western Confernce Finals, Bird caught fire in the final minutes, nailing 5 of her final 6 shots for 14 points in the closing minutes to win infront of the raucous KeyArena crowd. Bird and the Storm went on to sweep the Mystics in the Finals to claim a third championship."
+    "all_stars": 11
   },
   {
     "first_ofSeason": 1,
     "photo": "bird2020.jpg",
-    "credit": "",
+    "credit": "Phelan M. Ebenhack / AP",
     "season": 17,
     "game": 509,
     "date": "7/25/2020",
@@ -9691,8 +9694,7 @@
     "aggregate_3pts": 858,
     "gold_medals": 4,
     "titles": 3,
-    "all_stars": 11,
-    "notes": "Bird underwent surgergy on her left knee and would miss the entire 2019 season as a result. She also missed the 2013 season with a left knee injury. While off the court, she impacted the WNBA in bigger ways. As a member of the WNBA Players Associated executive committee, Bird helped negotiate a \"historic\" labor agreement that would restrutcure the financial landscape of women's basketball. “The deal represents moving forward both from a WNBA perspective, but also in general, for women in sports and society,\" she told The Times."
+    "all_stars": 11
   },
   {
     "first_ofSeason": 0,
@@ -9730,7 +9732,8 @@
     "aggregate_3pts": 863,
     "gold_medals": 4,
     "titles": 3,
-    "all_stars": 11
+    "all_stars": 11,
+    "notes": "Bird underwent left-knee surgery and missed the 2019 season. She also missed the 2013 season because of a left-knee injury. Off the court she impacted the WNBA in bigger ways. As a member of the WNBA Players Association executive committee, Bird helped negotiate a \"historic\" labor agreement that would restructure the financial landscape of women's basketball. “The deal represents moving forward both from a WNBA perspective, but also in general, for women in sports and society,\" she said."
   },
   {
     "first_ofSeason": 0,
@@ -9864,6 +9867,6 @@
     "gold_medals": 4,
     "titles": 3,
     "all_stars": 11,
-    "notes": "The Storm returned to full strength with both Bird and Stewart back from year-long absences only to be met with the most unusual circumstances we've ever witness -- a global pandemic shutting down society. The WNBA's truncated season commenced inside a bubble in Bradenton, Fla. where the Storm's juggernaut roster coasted to an 18-4 record. <p> Bird and the rest of the league dedicated their season to social justice as the country encounters a racial reckoning. Breonna Taylor, a Black woman who was shot and killed by police in her Louisville home, is seen on the back of every jersey as part of the \"Say Her Name\" campaign, which aims to fight for justice for Black women. Bird, who has been a vocal leader throughout her career, penned an essay with Sparks forward Nneka Ogwumike before the season for Phenomenal Media. \"This moment is so much bigger than sports,” they wrote. “For WNBA players like us, it presents an opportunity to represent ourselves—on the world stage—as we’ve always been. By using our platform to shine a light on injustice, presenting a tangible example of strong allyship, and contributing to what’s become the largest social movement in American history, we aspire to instill change that ripples far beyond the WNBA.”"
+    "notes": "The Storm returned to full strength with Bird and 2018 WNBA MVP Breanna Stewart back from year-long injury absences, only to be met with a global pandemic that shut down the sports world for nearly four months. The WNBA held a shortened season inside a \"bubble\" environment in Bradenton, Florida, where the Storm's juggernaut roster coasted to an 18-4 record. <p> Bird and the rest of the league dedicated the season to social justice as the country encountered a racial reckoning. The name of Breonna Taylor, a Black woman who was killed by police in her Louisville, Kentucky, home, is seen on the back of every jersey as part of the \"Say Her Name\" campaign, which fights for justice for Black women. Bird penned an essay with Sparks forward Nneka Ogwumike before the season for Phenomenal Media. \"This moment is so much bigger than sports,” they wrote. “For WNBA players like us, it presents an opportunity to represent ourselves — on the world stage — as we’ve always been. By using our platform to shine a light on injustice, presenting a tangible example of strong allyship, and contributing to what’s become the largest social movement in American history, we aspire to instill change that ripples far beyond the WNBA.”"
   }
 ]

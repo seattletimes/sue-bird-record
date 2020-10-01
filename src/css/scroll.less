@@ -44,20 +44,45 @@
     // &.active[data-season="1"] .backdrop { background-position: 70% 0 }
     // &.active[data-season="3"] .backdrop { background-position: 40% 0 }
 
-    &[data-season="1"] .backdrop { background-image: url(./assets/SueBird/bird2002.jpg) }
-    &[data-season="2"] .backdrop { background-image: url(./assets/SueBird/bird2003.jpg) }
-    &[data-season="3"] .backdrop { background-image: url(./assets/SueBird/bird2004.JPG) }
-    &[data-season="4"] .backdrop { background-image: url(./assets/SueBird/bird2005.jpg) }
-    &[data-season="5"] .backdrop { background-image: url(./assets/SueBird/bird2006.jpg) }
-    &[data-season="6"] .backdrop { background-image: url(./assets/SueBird/bird2007.jpg) }
-    &[data-season="7"] .backdrop { background-image: url(./assets/SueBird/bird2008.jpg) }
-    &[data-season="8"] .backdrop { background-image: url(./assets/SueBird/bird2009.jpg) }
-    &[data-season="9"] .backdrop { background-image: url(./assets/SueBird/bird2010.jpg) }
-    &[data-season="10"] .backdrop { background-image: url(./assets/SueBird/bird2011.jpg) }
-    &[data-season="11"] .backdrop { background-image: url(./assets/SueBird/bird2012.jpg) }
-    &[data-season="12"] .backdrop { background-image: url(./assets/SueBird/bird2014.jpg) }
-    &[data-season="13"] .backdrop { background-image: url(./assets/SueBird/bird2015.jpg) }
-    &[data-season="14"] .backdrop { background-image: url(./assets/SueBird/bird2016.jpg) }
+    &[data-season="1"] { .backdrop { background-image: url(./assets/SueBird/bird2002.jpg) } }
+    &[data-season="2"] { .backdrop { background-image: url(./assets/SueBird/bird2003.jpg) } }
+    &[data-season="3"] { .backdrop { background-image: url(./assets/SueBird/bird2004.JPG) } }
+    &[data-season="4"] {
+      .backdrop { background-image: url(./assets/SueBird/bird2005.jpg) }
+      @media @mobile {
+      .backdrop { background-image: url(./assets/SueBird/bird2005_mobile.jpg) }
+      }
+    }
+    &[data-season="5"] { .backdrop { background-image: url(./assets/SueBird/bird2006.jpg) } }
+    &[data-season="6"] {
+      .backdrop { background-image: url(./assets/SueBird/bird2007.jpg) }
+      @media @mobile {
+      .backdrop { background-image: url(./assets/SueBird/bird2007_mobile.jpg) }
+      }
+    }
+    &[data-season="7"] {
+      .backdrop { background-image: url(./assets/SueBird/bird2008.jpg) }
+      @media @mobile {
+      .backdrop { background-image: url(./assets/SueBird/bird2008_mobile.jpg) }
+      }
+    }
+    &[data-season="8"] {
+      .backdrop { background-image: url(./assets/SueBird/bird2009.jpg) }
+      @media @mobile {
+      .backdrop { background-image: url(./assets/SueBird/bird2009_mobile.jpg) }
+      }
+    }
+    &[data-season="9"] { .backdrop { background-image: url(./assets/SueBird/bird2010.jpg) } }
+    &[data-season="10"] { .backdrop { background-image: url(./assets/SueBird/bird2011.jpg) } }
+    &[data-season="11"] { .backdrop { background-image: url(./assets/SueBird/bird2012.jpg) } }
+    &[data-season="12"] { .backdrop { background-image: url(./assets/SueBird/bird2014.jpg) } }
+    &[data-season="13"] { .backdrop { background-image: url(./assets/SueBird/bird2015.jpg) } }
+    &[data-season="14"] {
+      .backdrop { background-image: url(./assets/SueBird/bird2016.jpg) }
+      @media @mobile {
+      .backdrop { background-image: url(./assets/SueBird/bird2016_mobile.jpg) }
+      }
+    }
     &[data-season="15"] .backdrop { background-image: url(./assets/SueBird/bird2017.jpg) }
     &[data-season="16"] .backdrop { background-image: url(./assets/SueBird/bird2018.jpg) }
     &[data-season="17"] .backdrop { background-image: url(./assets/SueBird/bird2020.jpg) }
@@ -205,6 +230,7 @@
           display: inline-block;
           padding: 0 10px;
           border-right: 1px solid #00712b;
+          @media @mobile { padding: 0 5px; }
         }
 
         .career:last-child {

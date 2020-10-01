@@ -1,5 +1,5 @@
-// var paywall = require("./lib/paywall");
-// setTimeout(() => paywall(13176670), 5000);
+var paywall = require("./lib/paywall");
+setTimeout(() => paywall(13176670), 5000);
 
 require("component-responsive-frame/child");
 

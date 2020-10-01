@@ -60,6 +60,8 @@ nav.main-nav {
     font-family: @df-sans;
     color: white;
     padding-left: 2px;
+
+    @media @mobile { font-size: 11px; }
     // background-color: white;
   }
 
@@ -183,6 +185,8 @@ header.intro {
     font-family: @df-sans;
 
     .thed { font-weight: bold; margin-bottom: 10px;}
+
+    @media @mobile { display: table; width: 100%; padding: 0px;  }
   }
 
   table {
@@ -229,7 +233,7 @@ header.intro {
       font-style: italic;
     }
 
-    @media @mobile { display: table; width: 100%;  }
+
   }
 
   .credits {
