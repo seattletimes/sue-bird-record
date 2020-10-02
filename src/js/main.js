@@ -85,7 +85,7 @@ var credits = {
   6: "Jim Bates / The Seattle Times",
   7: "John Froschauer / AP",
   8: "Mark Harrison / The Seattle Times",
-  9: "Jesse D. Garrabrant / Getting images",
+  9: "Jesse D. Garrabrant / Getty images",
   10: "Joel Hawksley / The Seattle Times ",
   11: "Elaine Thompson / AP",
   12: "Lindsey Wasson / The Seattle Times",
