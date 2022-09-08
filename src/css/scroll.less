@@ -86,6 +86,13 @@
     &[data-season="15"] .backdrop { background-image: url(./assets/SueBird/bird2017.jpg) }
     &[data-season="16"] .backdrop { background-image: url(./assets/SueBird/bird2018.jpg) }
     &[data-season="17"] .backdrop { background-image: url(./assets/SueBird/bird2020.jpg) }
+    &[data-season="18"] {
+      margin-bottom: 170vh;
+      .backdrop { background-image: url(./assets/SueBird/bird2021.jpg) }
+      @media @mobile {
+      .backdrop { background-image: url(./assets/SueBird/bird2021_mobile.jpg) }
+      }
+    }
   }
 
   .viz {
@@ -205,18 +212,21 @@
       font-size: 16px;
       padding: 10px;
 
-      .allstars img {
-        max-width: 30px;
-        @media @mobile { max-width: 20px; }
-      }
+      .allstars {
+        line-height: 1em;
+          img {
+            max-width: 30px;
+            @media @mobile { max-width: 16px; }
+          }
+        }
 
       .medals img {
-        max-width: 25px;
+        max-width: 20px;
         @media @mobile { max-width: 15px; }
       }
 
       .wnba img {
-        max-width: 35px;
+        max-width: 30px;
         @media @mobile { max-width: 20px; }
       }
 
@@ -246,15 +256,17 @@
         vertical-align: top;
         padding: 5px 10px;
         @media @mobile {
-          width: auto;
-          display: inline-block;
+          text-align: center;
+          // width: auto;
+          // display: inline-block;
           padding: 0;
         }
 
         .titlehed {
           display: none;
+          line-height: 1em;
 
-          @media @mobile { float: left; }
+          // @media @mobile { float: left; }
         }
       }
 

@@ -2,11 +2,17 @@
 <html lang="en-US">
   <head>
     <%= t.include("partials/_head.html", grunt.data.json) %>
-    <% if (json.project.production && !json.project.embedded) { %>
+    <% if (!json.project.embedded) { %>
       <%= t.include("partials/_dataLayer.html") %>
+      <script src="https://seattle-times.zeustechnology.com/main.js" async></script>
+      <script src="https://www.seattletimes.com/wp-content/plugins/st-advertising/dist/st-projects-bundle.js" async></script>
+    <% } %>
+    <% if (json.project.production && !json.project.embedded) { %>
       <%= t.include("partials/_gtm.html") %>
     <% } %>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bevan&family=Passion+One:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script>
       window.plum = <%= JSON.stringify(json.Lauren) %>;
@@ -22,23 +28,36 @@
 
     <header class="intro">
 
-      <img class="splash" src="./assets/Bird-Banner.jpg" alt="Measuring greatness: A look back at Sue Bird's 17-year career with the Storm">
+      <img srcset="./assets/Bird-Banner.jpg  1500w,
+      ./assets/Bird-Banner_mobile.jpg 475w"
+      sizes="(max-width: 500px) 33vw, 100vw"
+      src="./assets/Bird-Banner_mobile.jpg"
+      class="splash"
+      alt="Measuring greatness: A look back at Sue Bird's 17-year career with the Storm">
+
+      <!-- <img srcset="./assets/Sue-banner2022.jpg  1500w,
+./assets/Sue-banner2022_mobile.jpg 475w"
+sizes="(max-width: 500px) 33vw, 100vw"
+src="./assets/Sue-banner2022_mobile.jpg" class="splash" alt="Measuring greatness: A look back at Sue Bird's 18-year career with the Storm"> -->
 
       <div class="bigHed">
         <div class="headline">Measuring greatness</div>
-        <div class="subhed">A look back at Sue Bird's 17-year career with the Storm</div>
+        <div class="subhed">A look back at Sue Bird's 18-year career with the Storm</div>
       </div>
 
-      <div class="published">Published Oct. 2, 2020</div>
+      <div class="published">Published June 16, 2022</div>
+
+      <zeus-ad id='zeus_top' width="100%;"></zeus-ad>
 
       <div class="chatter">
+
         <p>
-          Sue Bird has already cemented her legacy as one of the greatest WNBA players of all time, along with her status as a Seattle sports icon. The accolades are staggering: 17 seasons, 11 All-Star selections, three-time WNBA champion, four-time Olympic gold medalist, two-time NCAA champion. She holds the WNBA assists record (and it’s not close), and has played in more games than anyone. She’s top five all time in career steals, and ranks No. 7 in total points.
+          Sue Bird has already cemented her legacy as one of the greatest WNBA players of all time, along with her status as a Seattle sports icon. The accolades are staggering -- 18 seasons, 12 All-Star selections, four-time WNBA champion, five-time Olympic gold medalist, two-time NCAA champion. She holds the WNBA assists record (and it’s not close), and has played in more games than anyone. She’s top five all time in career steals and ranks No. 7 in total points.
         </p>
 
-        <p>And she’s not done.</p>
+        <p>On Thursday, Bird announced on Twitter that the 2022 season will be her last – ending an unprecedented run of greatness that has vaulted her to legendary status. While Bird’s career had to end at some point, her longevity in the league made it seem like she might never retire.</p>
 
-        <p>The 39-year-old, 5-foot-9 guard from Syosett, New York, is on the cusp of capturing her fourth championship with the Storm. As Bird and the Storm get set for the Finals, take a look back at Bird’s historic career in Seattle.</p>
+        <p>As No. 10 enters the final stretch of her career, we took a deep look back at her career journey with the Storm and how she climbed to the peak she’s standing on today.</p>
       </div>
 
       <div class="scroll-indicator">
@@ -49,7 +68,7 @@
       <div id="navScroll">
       </div>
 
-      <% for (var i = 1; i < 18; i++) { %>
+      <% for (var i = 1; i < 19; i++) { %>
       <div class="season" data-season="<%= i %>" data-seasonData="<%= i %>">
         <div class="backdrop"></div>
       </div>
@@ -95,16 +114,22 @@
       <div class="content">
 
         <div class="row">
+          <div class="tableHed">"One more year"?</div>
+          <div class="chatter">
+            <p>
+              After the Storm’s playoff loss to Phoenix in 2021, the sports world wondered collectively: “Is it over?” An emotional Sue Bird tried to muster a comment during a postgame interview with ESPN’s Holly Rowe as fans showered her with a thunderous “ONE MORE YEAR” chant. We’d learn later that chant swayed the WNBA legend to return for another season – putting off retirement for at least one more year. While Bird hasn’t said it will in fact be her last in the league, it might take even more convincing for Bird to do the same after 2022. For now, fans will enjoy the heck out of one more year – and know they had a part in making it happen.
+            </p>
+          </div>
 
           <div class="chatter">
 
             <div class="enderImg">
-              <img src="assets/ender.JPG"/>
-              <p class="creditEnd">Photo: Bettina Hansen / The Seattle Times</p>
+              <img src="./assets/Sue-banner2022.jpg"/>
+              <p class="creditEnd">Credit: Illustration by Alessandro Pautasso for The Seattle Times</p>
             </div>
 
             <p>
-              In her 17 seasons, Sue Bird sits at or near the top of the rankings in assists, points, steals, three-pointers and games. Here’s where she stands among the all time WNBA leaders.
+              In her 18 seasons, Sue Bird sits at or near the top of the rankings in assists, points, steals, three-pointers and games. Here’s where she stands among the all time WNBA leaders.
             </p>
 
           </div>
@@ -231,6 +256,8 @@
           </table>
         </div>
 
+        <%= t.include("partials/_dontMiss.html") %>
+
 
           <%= t.include("partials/_marketing.html", {type: "morning_brief", placement: "footer"}) %>
 
@@ -249,6 +276,9 @@
             <a href="https://apnews.com/hub/sports" target="_blank" rel="nofollow noreferrer noopener">Associated Press</a></li>
           <li>Photo illustration:
             <a href="https://www.seattletimes.com/author/rich-boudet/" target="_blank" rel="nofollow noreferrer noopener">Rich Boudet</a>
+          </li>
+          <li>Additional art:
+            <a href="https://nosurprises.it/" target="_blank" rel="nofollow noreferrer noopener">Alessandro Pautasso</a>
           </li>
           <li>Photo production:
             <a href="https://www.seattletimes.com/author/amanda-snyder/" target="_blank" rel="nofollow noreferrer noopener">Amanda Snyder</a>

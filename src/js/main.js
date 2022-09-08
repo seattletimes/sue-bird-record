@@ -1,5 +1,5 @@
-var paywall = require("./lib/paywall");
-setTimeout(() => paywall(13176670), 5000);
+// var paywall = require("./lib/paywall");
+// setTimeout(() => paywall(13176670), 5000);
 
 require("component-responsive-frame/child");
 
@@ -23,7 +23,11 @@ var body = document.body,
 var height = Math.max( body.scrollHeight, body.offsetHeight,
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
 
+// var height = Math.max( body.scrollHeight, body.offsetHeight,
+//                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+
 var graphWidth = scrollContainer.offsetWidth;
+console.log(graphWidth);
 var navScroll = document.getElementById("navScroll");
 
 
@@ -36,7 +40,7 @@ var seasonCounter = 0;
 // console.log(gameData);
 var maxPoints = gameData[gameData.length - 1].aggregate + 100;
 var total = 0;
-var bySeason = { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [], 11: [], 12: [], 13: [], 14: [], 15: [], 16: [], 17: [] };
+var bySeason = { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [], 11: [], 12: [], 13: [], 14: [], 15: [], 16: [], 17: [], 18: [] };
 gameData.forEach(function(g, i) {
   bySeason[g.season].push(g);
   var [month, day, year] = g.date.split("/").map(Number);
@@ -56,8 +60,8 @@ gameData.forEach(function(g, i) {
     var seasonSep = document.createElement("div");
     seasonSep.className = "seasonSep";
     seasonSep.setAttribute("data-index", i);
-    console.log(i);
-    seasonSep.innerHTML = `S${seasonCounter}`;
+    // console.log(i);
+    seasonSep.innerHTML = graphWidth > 450 ? `S${seasonCounter}`: `${seasonCounter}`;
     seasonSep.style.left = (i + 1) / gameData.length * 100 + "%";
     seasonSep.style.top = "0%";
     navScroll.appendChild(seasonSep);
@@ -94,6 +98,7 @@ var credits = {
   15: "Dean Rutz / The Seattle Times",
   16: "Bettina Hansen / The Seattle Times",
   17: "Phelan M. Ebenhack / AP",
+  18: "Charlie Neibergall / AP",
 };
 
 var palette = {
